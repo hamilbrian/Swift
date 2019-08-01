@@ -30,6 +30,9 @@
 		5250185C22EFC5BF00584CBE /* AnyCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250185822EFC5BF00584CBE /* AnyCodable.swift */; };
 		5250185D22EFC5BF00584CBE /* Log.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250185922EFC5BF00584CBE /* Log.swift */; };
 		5250185F22EFC5E500584CBE /* GameSavePersistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250185E22EFC5E500584CBE /* GameSavePersistence.swift */; };
+		5250186722F2591100584CBE /* BattleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250186622F2591100584CBE /* BattleModel.swift */; };
+		5250186922F2592C00584CBE /* BattleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5250186822F2592C00584CBE /* BattleViewController.swift */; };
+		5250186B22F2593F00584CBE /* Battle.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5250186A22F2593F00584CBE /* Battle.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +61,9 @@
 		5250185822EFC5BF00584CBE /* AnyCodable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnyCodable.swift; sourceTree = "<group>"; };
 		5250185922EFC5BF00584CBE /* Log.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Log.swift; sourceTree = "<group>"; };
 		5250185E22EFC5E500584CBE /* GameSavePersistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSavePersistence.swift; sourceTree = "<group>"; };
+		5250186622F2591100584CBE /* BattleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleModel.swift; sourceTree = "<group>"; };
+		5250186822F2592C00584CBE /* BattleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BattleViewController.swift; sourceTree = "<group>"; };
+		5250186A22F2593F00584CBE /* Battle.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Battle.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -149,9 +155,8 @@
 		5250186222EFC89300584CBE /* WorkFlow */ = {
 			isa = PBXGroup;
 			children = (
-				4147B78522BFFA480002156A /* GameModel.swift */,
-				4147B77422BFF9DA0002156A /* GameViewController.swift */,
-				4147B77622BFF9DA0002156A /* Main.storyboard */,
+				5250186522F258F300584CBE /* Battle */,
+				5250186422F258E700584CBE /* Main Game */,
 				5250183D22EFB85200584CBE /* gameSave.swift */,
 			);
 			path = WorkFlow;
@@ -164,6 +169,26 @@
 				5250183F22EFBACA00584CBE /* ApplicationSession.swift */,
 			);
 			path = Session;
+			sourceTree = "<group>";
+		};
+		5250186422F258E700584CBE /* Main Game */ = {
+			isa = PBXGroup;
+			children = (
+				4147B78522BFFA480002156A /* GameModel.swift */,
+				4147B77422BFF9DA0002156A /* GameViewController.swift */,
+				4147B77622BFF9DA0002156A /* Main.storyboard */,
+			);
+			path = "Main Game";
+			sourceTree = "<group>";
+		};
+		5250186522F258F300584CBE /* Battle */ = {
+			isa = PBXGroup;
+			children = (
+				5250186622F2591100584CBE /* BattleModel.swift */,
+				5250186822F2592C00584CBE /* BattleViewController.swift */,
+				5250186A22F2593F00584CBE /* Battle.storyboard */,
+			);
+			path = Battle;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -225,6 +250,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5250186B22F2593F00584CBE /* Battle.storyboard in Resources */,
 				4147B77D22BFF9DC0002156A /* LaunchScreen.storyboard in Resources */,
 				4147B77A22BFF9DC0002156A /* Assets.xcassets in Resources */,
 				4147B77822BFF9DA0002156A /* Main.storyboard in Resources */,
@@ -268,9 +294,11 @@
 				5250185122EFC5B900584CBE /* URL.swift in Sources */,
 				4147B77522BFF9DA0002156A /* GameViewController.swift in Sources */,
 				5250185422EFC5B900584CBE /* JSONDecoder.swift in Sources */,
+				5250186722F2591100584CBE /* BattleModel.swift in Sources */,
 				5250185522EFC5B900584CBE /* KeyedEncodingContainerProtocol.swift in Sources */,
 				5250184522EFC5A500584CBE /* FileManager.swift in Sources */,
 				5250185A22EFC5BF00584CBE /* JsonCodingKeys.swift in Sources */,
+				5250186922F2592C00584CBE /* BattleViewController.swift in Sources */,
 				5250185322EFC5B900584CBE /* UnkeyedEncodingContainer.swift in Sources */,
 				4147B77322BFF9DA0002156A /* AppDelegate.swift in Sources */,
 				5250185D22EFC5BF00584CBE /* Log.swift in Sources */,

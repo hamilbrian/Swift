@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="pWN-Sh-8t8">
+            <objects>
+                <viewController id="DeM-NN-gjq" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Zgy-c8-BY5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aUl-Lm-OTl" userLabel="Main View Stack">
+                                <rect key="frame" x="85.5" y="297" width="243" height="302"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goblin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3J-dw-kcb" userLabel="Enemy">
+                                        <rect key="frame" x="97" y="0.0" width="49.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ati-ch-7DM">
+                                        <rect key="frame" x="0.0" y="30.5" width="243" height="127.5"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enemy Health: 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-OD-uQU" userLabel="Enemy Health">
+                                        <rect key="frame" x="50" y="168" width="143.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zaG-NL-Jyl" userLabel="Player Stack">
+                                        <rect key="frame" x="52.5" y="198.5" width="138.5" height="103.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weapon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8U-KR-cE5" userLabel="Player Weapon">
+                                                <rect key="frame" x="0.0" y="0.0" width="138.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Health: 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbG-tp-6uz" userLabel="Player Health">
+                                                <rect key="frame" x="0.0" y="20.5" width="138.5" height="21"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzF-la-Kw0" userLabel="Attack Button">
+                                                <rect key="frame" x="0.0" y="41.5" width="138.5" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="DzF-la-Kw0" secondAttribute="height" multiplier="23:5" id="zAz-Oz-p1h"/>
+                                                </constraints>
+                                                <state key="normal" title="Attack"/>
+                                                <connections>
+                                                    <action selector="AttackButton:" destination="Yp8-Ue-n53" eventType="touchUpInside" id="iBu-v4-v3L"/>
+                                                    <action selector="AttackButtonPressed:" destination="Yp8-Ue-n53" eventType="touchUpInside" id="0iu-cx-TqT"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8d0-Uf-mDB" userLabel="Flee Button">
+                                                <rect key="frame" x="0.0" y="71.5" width="138.5" height="32"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="8d0-Uf-mDB" secondAttribute="height" multiplier="69:16" id="15Z-YP-DxH"/>
+                                                </constraints>
+                                                <state key="normal" title="Flee"/>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="zaG-NL-Jyl" secondAttribute="height" multiplier="138:103" id="xV7-vQ-RwJ"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="302" id="Y13-3C-atn"/>
+                                    <constraint firstAttribute="width" constant="243" id="duz-To-N1B"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="aUl-Lm-OTl" firstAttribute="centerY" secondItem="Zgy-c8-BY5" secondAttribute="centerY" id="5u0-Sp-KDR"/>
+                            <constraint firstItem="aUl-Lm-OTl" firstAttribute="centerX" secondItem="Zgy-c8-BY5" secondAttribute="centerX" id="b1s-C5-uUG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Jg8-FS-yDg"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CD6-3G-Se0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="Yp8-Ue-n53" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="5.7971014492753632" y="58.928571428571423"/>
+        </scene>
+    </scenes>
+</document>
