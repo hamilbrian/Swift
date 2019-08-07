@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DeM-NN-gjq">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,75 +10,90 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Battle View Controller-->
         <scene sceneID="pWN-Sh-8t8">
             <objects>
-                <viewController id="DeM-NN-gjq" sceneMemberID="viewController">
+                <viewController id="DeM-NN-gjq" userLabel="Battle View Controller" customClass="BattleViewController" customModule="TwoDimensionalGame" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Zgy-c8-BY5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aUl-Lm-OTl" userLabel="Main View Stack">
-                                <rect key="frame" x="85.5" y="297" width="243" height="302"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="aUl-Lm-OTl" userLabel="Main View Stack">
+                                <rect key="frame" x="82" y="188" width="250" height="520.5"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goblin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3J-dw-kcb" userLabel="Enemy">
-                                        <rect key="frame" x="97" y="0.0" width="49.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Event" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eu9-p8-nzp" userLabel="eventText">
+                                        <rect key="frame" x="0.0" y="0.0" width="250" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ati-ch-7DM">
-                                        <rect key="frame" x="0.0" y="30.5" width="243" height="127.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Goblin" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V3J-dw-kcb" userLabel="Enemy">
+                                        <rect key="frame" x="0.0" y="30.5" width="250" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Goblin" highlightedImage="Goblin" translatesAutoresizingMaskIntoConstraints="NO" id="ati-ch-7DM" userLabel="Enemy Image">
+                                        <rect key="frame" x="0.0" y="61" width="250" height="250"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="250" id="DbZ-cb-5Dg"/>
+                                            <constraint firstAttribute="width" secondItem="ati-ch-7DM" secondAttribute="height" multiplier="1:1" id="Hgb-mH-hwu"/>
+                                        </constraints>
                                     </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enemy Health: 100" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-OD-uQU" userLabel="Enemy Health">
-                                        <rect key="frame" x="50" y="168" width="143.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enemy Health: 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ugd-OD-uQU" userLabel="Enemy Health">
+                                        <rect key="frame" x="0.0" y="321" width="250" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="zaG-NL-Jyl" userLabel="Player Stack">
-                                        <rect key="frame" x="52.5" y="198.5" width="138.5" height="103.5"/>
+                                        <rect key="frame" x="0.0" y="351.5" width="250" height="169"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Weapon" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d8U-KR-cE5" userLabel="Player Weapon">
-                                                <rect key="frame" x="0.0" y="0.0" width="138.5" height="20.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="250" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Player Health: 100" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RbG-tp-6uz" userLabel="Player Health">
-                                                <rect key="frame" x="0.0" y="20.5" width="138.5" height="21"/>
+                                                <rect key="frame" x="0.0" y="20.5" width="250" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DzF-la-Kw0" userLabel="Attack Button">
-                                                <rect key="frame" x="0.0" y="41.5" width="138.5" height="30"/>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="9q7-1p-a5z">
+                                                <rect key="frame" x="0.0" y="41" width="250" height="128"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 <constraints>
-                                                    <constraint firstAttribute="width" secondItem="DzF-la-Kw0" secondAttribute="height" multiplier="23:5" id="zAz-Oz-p1h"/>
+                                                    <constraint firstAttribute="width" secondItem="9q7-1p-a5z" secondAttribute="height" multiplier="125:64" id="qaz-xe-Q8O"/>
                                                 </constraints>
-                                                <state key="normal" title="Attack"/>
+                                                <prototypes>
+                                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ActionCell" textLabel="E4k-Wh-zA1" style="IBUITableViewCellStyleDefault" id="HLI-iS-grc">
+                                                        <rect key="frame" x="0.0" y="28" width="250" height="44"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HLI-iS-grc" id="6dg-gG-jhx">
+                                                            <rect key="frame" x="0.0" y="0.0" width="250" height="43.5"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="E4k-Wh-zA1">
+                                                                    <rect key="frame" x="16" y="0.0" width="218" height="43.5"/>
+                                                                    <autoresizingMask key="autoresizingMask"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </tableViewCellContentView>
+                                                    </tableViewCell>
+                                                </prototypes>
                                                 <connections>
-                                                    <action selector="AttackButton:" destination="Yp8-Ue-n53" eventType="touchUpInside" id="iBu-v4-v3L"/>
-                                                    <action selector="AttackButtonPressed:" destination="Yp8-Ue-n53" eventType="touchUpInside" id="0iu-cx-TqT"/>
+                                                    <outlet property="dataSource" destination="DeM-NN-gjq" id="dnk-M5-rYv"/>
+                                                    <outlet property="delegate" destination="DeM-NN-gjq" id="Cid-rg-0q2"/>
                                                 </connections>
-                                            </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8d0-Uf-mDB" userLabel="Flee Button">
-                                                <rect key="frame" x="0.0" y="71.5" width="138.5" height="32"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" secondItem="8d0-Uf-mDB" secondAttribute="height" multiplier="69:16" id="15Z-YP-DxH"/>
-                                                </constraints>
-                                                <state key="normal" title="Flee"/>
-                                            </button>
+                                            </tableView>
                                         </subviews>
-                                        <constraints>
-                                            <constraint firstAttribute="width" secondItem="zaG-NL-Jyl" secondAttribute="height" multiplier="138:103" id="xV7-vQ-RwJ"/>
-                                        </constraints>
                                     </stackView>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="302" id="Y13-3C-atn"/>
-                                    <constraint firstAttribute="width" constant="243" id="duz-To-N1B"/>
-                                </constraints>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -88,11 +103,22 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Jg8-FS-yDg"/>
                     </view>
+                    <connections>
+                        <outlet property="enemyHealth" destination="Ugd-OD-uQU" id="0nP-4r-Tq4"/>
+                        <outlet property="enemyImage" destination="ati-ch-7DM" id="I9H-VE-WGI"/>
+                        <outlet property="enemyName" destination="V3J-dw-kcb" id="W2f-2M-qru"/>
+                        <outlet property="eventText" destination="Eu9-p8-nzp" id="1em-7u-MUP"/>
+                        <outlet property="playerHealth" destination="RbG-tp-6uz" id="vtT-1v-wPn"/>
+                        <outlet property="playerWeapon" destination="d8U-KR-cE5" id="7I1-tJ-p4m"/>
+                        <outlet property="tableView" destination="9q7-1p-a5z" id="66u-Kn-q2y"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CD6-3G-Se0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="Yp8-Ue-n53" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="5.7971014492753632" y="58.928571428571423"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Goblin" width="1000" height="1000"/>
+    </resources>
 </document>

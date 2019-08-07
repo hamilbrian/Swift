@@ -55,11 +55,10 @@ final class GameModel {
     var gold = 0
     var enemy = ""
     var foundWeapon = ""
-    var equippedWeapon = "none"
+    var equippedWeapon = ""
     var playerHealth = 100
     
-    // Added for refernce in GameViewController when calculating distance
-    // to animate playerView
+    // Added for reference in GameViewController when calculating distance to animate playerView
     var rowCount: CGFloat { return CGFloat(grid.count) }
     
     init(delegate: GameModelDelegate) {
@@ -95,6 +94,7 @@ extension GameModel {
     func fastTravelHome() {
         currentRowIndex = 0
         currentLocationIndex = 0
+        playerHealth = 100
         
         for index in 0 ..< directions.count {
             directions[index] = true
@@ -105,9 +105,12 @@ extension GameModel {
         }
         
         currentPosition = "x: \(currentRowIndex) y: \(currentLocationIndex) "
-        normalEvent = "You spent five gold to get home safely"
+        normalEvent = "You got home safely."
         gold -= 5
         specialEvent = ""
+        enemy = ""
+        saveGame()
+        delegate?.updateUIView()
     }
     
     func currentLocation() -> Location {
@@ -118,24 +121,11 @@ extension GameModel {
         equippedWeapon = foundWeapon
         foundWeapon = ""
         specialEvent = ""
-        normalEvent = "You equipped a(n) " + equippedWeapon
+        normalEvent = "You equipped a(n) " + equippedWeapon + "."
         saveGame()
     }
     
     func attack() {
-        let chanceToBreakWeapon = Int.random(in: 0 ... 100)
-        
-        if chanceToBreakWeapon > 50 {
-            equippedWeapon = "none"
-            normalEvent = "Your weapon broke!"
-        }
-        else {
-            normalEvent = "You killed the " + enemy
-        }
-        
-        specialEvent = ""
-        enemy = ""
-        
         saveGame()
     }
     
@@ -152,14 +142,15 @@ extension GameModel {
                 directions[0] = false
                 directions[1] = true
                 limitAlerts[0] = true
+                normalEvent = "Northern Edge."
             }
             else {
                 directions[0] = true
                 directions[1] = true
+                delegate?.animateMovement(direction: .north)
+                normalEvent = "Moved North."
+                randomEncounter()
             }
-            
-            normalEvent = "Moved North"
-            randomEncounter()
             
         case .east:
             currentLocationIndex -= 1
@@ -167,14 +158,15 @@ extension GameModel {
                 directions[2] = false
                 directions[3] = true
                 limitAlerts[2] = true
+                normalEvent = "Eastern Edge."
             }
             else {
                 directions[2] = true
                 directions[3] = true
+                delegate?.animateMovement(direction: .east)
+                normalEvent = "Moved East."
+                randomEncounter()
             }
-            
-            normalEvent = "Moved East"
-            randomEncounter()
             
         case .west:
             currentLocationIndex += 1
@@ -182,14 +174,15 @@ extension GameModel {
                 directions[3] = false
                 directions[2] = true
                 limitAlerts[3] = true
+                normalEvent = "Western Edge."
             }
             else {
                 directions[3] = true
                 directions[2] = true
+                delegate?.animateMovement(direction: .west)
+                normalEvent = "Moved West."
+                randomEncounter()
             }
-            
-            normalEvent = "Moved West"
-            randomEncounter()
             
         case .south:
             currentRowIndex -= 1
@@ -197,18 +190,17 @@ extension GameModel {
                 directions[1] = false
                 directions[0] = true
                 limitAlerts[1] = true
+                normalEvent = "Southern Edge."
             }
             else {
                 directions[1] = true
                 directions[0] = true
+                delegate?.animateMovement(direction: .south)
+                normalEvent = "Moved South."
+                randomEncounter()
             }
-            
-            normalEvent = "Moved South"
-            randomEncounter()
         }
-        
         currentPosition = "x: \(currentRowIndex) y: \(currentLocationIndex) "
-        
     }
 }
 
@@ -225,15 +217,10 @@ extension GameModel {
                 let event = self.event(forCoordinate: coordinate)
                 
                 return Location(coordinate: coordinate, allowedDirections: allowedDirections, event: event)
-                
             }
-            
             return Row(locations: locations)
-            
         }
-        
         return gameGrid
-        
     }
     
     private func allowedDirections(forCoordinate coordinate: Coordinate) -> [Direction] {
@@ -273,12 +260,12 @@ extension GameModel {
             // 30 percent chance of encounter
             let randomNumber = Int.random(in: 0 ... 100)
             
-            if (randomNumber < 30) {
+            if (randomNumber < 101) {
                 
                 let encounterChoice = Int.random(in: 1 ... 100)
                 
                 switch encounterChoice {
-                case 1, 18, 45:
+                case 1:
                     self.red = 0
                     self.blue = 150 / 255
                     self.green = 150 / 255
@@ -302,7 +289,7 @@ extension GameModel {
                     self.green = 0
                     self.specialEvent = "an enemy!"
                     self.enemy = "Kobold"
-                case 5:
+                case 5, 45:
                     self.red = 128 / 255
                     self.blue = 45 / 255
                     self.green = 90 / 255
@@ -314,6 +301,12 @@ extension GameModel {
                     self.green = 128 / 255
                     self.specialEvent = "a pile of gold!"
                     gold += Int.random(in: 10 ... 20)
+                case 11, 43:
+                    self.red = 128 / 255
+                    self.blue = 45 / 255
+                    self.green = 90 / 255
+                    self.specialEvent = "a spear!"
+                    self.foundWeapon = "Spear"
                 default:
                     self.red = 250 / 255
                     self.blue = 250 / 255
@@ -322,5 +315,69 @@ extension GameModel {
                 }
             }
         }
+    }
+}
+
+extension GameModel: BattleModelDelegate {
+    
+    func updateUI() {
+        // don't need to change anything here
+    }
+    
+    func flee(playerWeapon: String, playerHealth: Int) {
+        normalEvent = "You ran like a coward!"
+        self.playerHealth = playerHealth
+        self.equippedWeapon = playerWeapon
+        enemy = ""
+        specialEvent = ""
+        if gold >= 10 {
+            gold -= 10
+        }
+        
+        else {
+            gold = 0
+        }
+        
+        saveGame()
+        
+        delegate?.updateUIView()
+    }
+    
+    func victory(playerHealth: Int) {
+        self.playerHealth = playerHealth
+        normalEvent = "You killed the " + enemy + "!"
+        enemy = ""
+        specialEvent = ""
+        saveGame()
+        delegate?.updateUIView()
+    }
+    
+    func death() {
+        normalEvent = "You died!"
+        playerHealth = 100
+        enemy = ""
+        specialEvent = ""
+        equippedWeapon = ""
+        
+        if gold >= 20 {
+            gold -= 20
+        }
+        else {
+            gold = 0
+        }
+        currentRowIndex = 0
+        currentLocationIndex = 0
+        
+        for index in 0 ..< directions.count {
+            directions[index] = true
+        }
+        
+        for index in 0 ..< limitAlerts.count {
+            limitAlerts[index] = false
+        }
+        
+        currentPosition = "x: \(currentRowIndex) y: \(currentLocationIndex) "
+        saveGame()
+        delegate?.updateUIView()
     }
 }

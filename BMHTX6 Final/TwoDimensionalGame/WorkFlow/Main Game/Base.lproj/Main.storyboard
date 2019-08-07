@@ -175,7 +175,13 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="n8o-J9-0Un"/>
+                    <navigationItem key="navigationItem" id="n8o-J9-0Un">
+                        <barButtonItem key="leftBarButtonItem" id="dE3-fL-CrU">
+                            <connections>
+                                <segue destination="aTP-rN-hoe" kind="show" identifier="BattleModel" id="hWD-YF-LBA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="EastButton" destination="FDf-Zv-LSc" id="aKN-Wd-x1M"/>
                         <outlet property="GoldLabel" destination="tPv-fI-DIY" id="5IU-Pe-1sf"/>
@@ -197,13 +203,13 @@
             </objects>
             <point key="canvasLocation" x="40.799999999999997" y="26.53673163418291"/>
         </scene>
-        <!--BattleViewController-->
+        <!--Battle-->
         <scene sceneID="hCW-iF-Gh1">
             <objects>
-                <viewControllerPlaceholder storyboardName="BattleViewController" referencedIdentifier="BattleViewController" id="aTP-rN-hoe" sceneMemberID="viewController"/>
+                <viewControllerPlaceholder storyboardName="Battle" id="aTP-rN-hoe" sceneMemberID="viewController"/>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3TI-4h-KCP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="558" y="26"/>
+            <point key="canvasLocation" x="632" y="26"/>
         </scene>
     </scenes>
 </document>

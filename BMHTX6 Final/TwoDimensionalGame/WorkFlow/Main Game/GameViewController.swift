@@ -26,7 +26,7 @@ class GameViewController: UIViewController {
     @IBOutlet private weak var playerViewCenterYConstraint: NSLayoutConstraint!
     @IBOutlet private weak var playerViewCenterXConstraint: NSLayoutConstraint!
     
-    private var gameModel: GameModel!
+    var gameModel: GameModel!
     
     // initial loading
     override func viewDidLoad() {
@@ -43,28 +43,24 @@ extension GameViewController {
   
     @IBAction func NorthPressed(_ sender: Any) {
         gameModel.move(direction: .north)
-        animateMovement(direction: .north)
         updateUIView()
         gameModel.saveGame()
     }
     
     @IBAction func EastPressed(_ sender: Any) {
         gameModel.move(direction: .east)
-        animateMovement(direction: .east)
         updateUIView()
         gameModel.saveGame()
     }
     
     @IBAction func WestPressed(_ sender: Any) {
         gameModel.move(direction: .west)
-        animateMovement(direction: .west)
         updateUIView()
         gameModel.saveGame()
     }
     
     @IBAction func SouthPressed(_ sender: Any) {
         gameModel.move(direction: .south)
-        animateMovement(direction: .south)
         updateUIView()
         gameModel.saveGame()
     }
@@ -95,13 +91,13 @@ extension GameViewController: GameModelDelegate {
             }
             
             if (gameModel.foundWeapon.isEmpty == false) {
-                alert.addAction(UIAlertAction(title: "Leave it", style: .cancel, handler: nil))
                 alert.addAction(UIAlertAction(title: "Equip", style: .default, handler: { [weak self] (alert: UIAlertAction!) in self?.gameModel.equipWeapon(); self?.updateUIView()}))
+                alert.addAction(UIAlertAction(title: "Leave it", style: .cancel, handler: nil))
             }
             
             if (gameModel.enemy.isEmpty == false) {
-                if (gameModel.equippedWeapon != "none") {
-                    alert.addAction(UIAlertAction(title: "Attack " + gameModel.enemy, style: .default, handler: { [weak self] (alert: UIAlertAction!) in self?.gameModel.attack(); self?.updateUIView()}))
+                if (gameModel.equippedWeapon.isEmpty == false) {
+                    alert.addAction(UIAlertAction(title: "Attack " + gameModel.enemy, style: .default, handler: { [weak self] (alert: UIAlertAction!) in self?.performSegue(withIdentifier: "BattleModel", sender: self)}))
                 }
                 alert.addAction(UIAlertAction(title: "Run", style: .default, handler: nil))
             }
@@ -110,7 +106,7 @@ extension GameViewController: GameModelDelegate {
             self.present(alert, animated: true)
         }
         
-        if gameModel.gold >= 5 {
+        if gameModel.gold >= 5 && (gameModel.currentLocationIndex != 0 || gameModel.currentRowIndex != 0) {
             ResetButton.isEnabled = true
         }
         else {
@@ -156,6 +152,7 @@ extension GameViewController: GameModelDelegate {
     }
     
     func animateMovement (direction: Direction) {
+        
         let movementLength = gameGridView.frame.height / gameModel.rowCount
         
         switch direction {
@@ -167,19 +164,36 @@ extension GameViewController: GameModelDelegate {
         
         // UIViewPropertyAnimator is a UIKit object that controls the animation of UIView properties.
         let animator = UIViewPropertyAnimator(duration: 0.25, dampingRatio: 0.75) { [weak self] in
-            // Animate the laying out of our ViewController's root view subviews
-            // over the specified duration
+            // Animate the laying out of our ViewController's root view subviews over the specified duration
             self?.view.layoutIfNeeded()
         }
         
         // Ensure buttons can't be tapped during animation
         animator.isUserInteractionEnabled = false
+        
         // Begin animating
         animator.startAnimation()
     }
     
     func setStartingLocation() {
+        
+        playerViewCenterXConstraint.constant = 0
+        playerViewCenterXConstraint.constant = 0
+        
+        // set icon starting location based on saved position
+        let movementLength = gameGridView.frame.height / gameModel.rowCount
+        
+        playerViewCenterXConstraint.constant += CGFloat(gameModel.currentLocationIndex) * movementLength
 
+        playerViewCenterYConstraint.constant -= CGFloat(gameModel.currentRowIndex) * movementLength
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let battleViewController = segue.destination as?
+            BattleViewController {
+            let battleModel = BattleModel(delegate: gameModel, playerHealth: gameModel.playerHealth, enemyName: gameModel.enemy, playerWeapon: gameModel.equippedWeapon)
+            battleViewController.setup(battleModel: battleModel)
+        } 
     }
 }
 
