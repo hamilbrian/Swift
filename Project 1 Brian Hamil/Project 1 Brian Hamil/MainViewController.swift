@@ -10,22 +10,16 @@ import UIKit
 
 class MainViewController: UIViewController {
 
+    @IBOutlet weak var PlayButton: UIButton!
+    @IBOutlet weak var OptionsButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-    }
-    
-    func transitionToViewController() {
-        let deckController = DeckViewController()
-        deckController.willMove(toParent: self)
-        let current = children.first!
-        addChild(deckController)
-        self.view.addSubview(deckController.view)
-        deckController.didMove(toParent: self)
         
-        current.willMove(toParent: nil)
-        current.view.removeFromSuperview()
-        current.didMove(toParent: nil)
+//        PlayButton.center = self.view.center
+//        OptionsButton.center.x = PlayButton.center.x
+//        OptionsButton.center.y = PlayButton.center.y
     }
 
 }
