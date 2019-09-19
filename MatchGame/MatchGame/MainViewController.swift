@@ -1,5 +1,5 @@
 //
-//  GameViewController.swift
+//  MainViewController.swift
 //  MatchGame
 //
 //  Created by Hamil, Brian (UMSL-Student) on 9/17/19.
@@ -14,23 +14,6 @@ class MainViewController: UIViewController {
         super.viewDidLoad()
         
         showMainMenu()
-        
-    }
-
-    override var shouldAutorotate: Bool {
-        return true
-    }
-
-    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
-        if UIDevice.current.userInterfaceIdiom == .phone {
-            return .allButUpsideDown
-        } else {
-            return .all
-        }
-    }
-
-    override var prefersStatusBarHidden: Bool {
-        return true
     }
     
     func showMainMenu() {
@@ -52,12 +35,10 @@ class MainViewController: UIViewController {
     }
     
     @objc func playPressed() {
-        let optionsMenu = OptionsViewController()
-        performSegue(withIdentifier: "OptionsView", sender: self)
+
     }
     
     @objc func optionsPressed() {
-        print("Options")
-    }
 
+    }
 }

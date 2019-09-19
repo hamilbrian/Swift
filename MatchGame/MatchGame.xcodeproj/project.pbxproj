@@ -12,7 +12,6 @@
 		520D7073233186E000023E58 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520D7071233186E000023E58 /* Main.storyboard */; };
 		520D7075233186EB00023E58 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 520D7074233186EB00023E58 /* Assets.xcassets */; };
 		520D7078233186EB00023E58 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 520D7076233186EB00023E58 /* LaunchScreen.storyboard */; };
-		522F7B002334237000F8F1D4 /* OptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 522F7AFF2334237000F8F1D4 /* OptionsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +41,6 @@
 		520D7079233186EB00023E58 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		520D707E233186EB00023E58 /* MatchGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatchGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		520D7089233186EB00023E58 /* MatchGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MatchGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		522F7AFF2334237000F8F1D4 /* OptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,7 +95,6 @@
 				520D7074233186EB00023E58 /* Assets.xcassets */,
 				520D7076233186EB00023E58 /* LaunchScreen.storyboard */,
 				520D7079233186EB00023E58 /* Info.plist */,
-				522F7AFF2334237000F8F1D4 /* OptionsViewController.swift */,
 			);
 			path = MatchGame;
 			sourceTree = "<group>";
@@ -233,7 +230,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				522F7B002334237000F8F1D4 /* OptionsViewController.swift in Sources */,
 				520D7070233186E000023E58 /* MainViewController.swift in Sources */,
 				520D7068233186E000023E58 /* AppDelegate.swift in Sources */,
 			);
