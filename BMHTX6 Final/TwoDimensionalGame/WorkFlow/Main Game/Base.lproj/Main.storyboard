@@ -129,7 +129,7 @@
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" alignment="center" spacing="68" translatesAutoresizingMaskIntoConstraints="NO" id="lhT-Nb-9zu" userLabel="East and West Sub Stack">
-                                                <rect key="frame" x="27.5" y="40.5" width="320" height="41"/>
+                                                <rect key="frame" x="50.5" y="40.5" width="274" height="41"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FDf-Zv-LSc">
                                                         <rect key="frame" x="0.0" y="5.5" width="30" height="30"/>
@@ -139,14 +139,14 @@
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pAm-Tw-AK7">
-                                                        <rect key="frame" x="98" y="5.5" width="119" height="30"/>
-                                                        <state key="normal" title="Fast Travel Home"/>
+                                                        <rect key="frame" x="98" y="5.5" width="73" height="30"/>
+                                                        <state key="normal" title="Play Game"/>
                                                         <connections>
                                                             <action selector="ResetPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yEt-6G-MYF"/>
                                                         </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GWO-BL-BIT">
-                                                        <rect key="frame" x="285" y="5.5" width="35" height="30"/>
+                                                        <rect key="frame" x="239" y="5.5" width="35" height="30"/>
                                                         <state key="normal" title="West"/>
                                                         <connections>
                                                             <action selector="WestPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="VjT-4D-Yfa"/>
