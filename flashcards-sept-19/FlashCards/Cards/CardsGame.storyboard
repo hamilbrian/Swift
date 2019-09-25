@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nfR-tr-YSf">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Cards View Controller-->
+        <scene sceneID="EUD-yK-QRr">
+            <objects>
+                <viewController id="nfR-tr-YSf" customClass="CardsViewController" customModule="FlashCards" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h7Q-UU-a4z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="SP8-Fb-HvT">
+                                <rect key="frame" x="34" y="194" width="345" height="508"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="tqK-7i-6Kh">
+                                    <size key="itemSize" width="50" height="50"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="GameGrid" id="gY5-ID-Amx">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="WKB-L3-wNr">
+                                            <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bjG-2U-6fF" userLabel="Container">
+                                <rect key="frame" x="41.5" y="108" width="331" height="331"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tdQ-8c-oJd">
+                                        <rect key="frame" x="96" y="129.5" width="139" height="72"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="60"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="tdQ-8c-oJd" firstAttribute="centerX" secondItem="bjG-2U-6fF" secondAttribute="centerX" id="2Zn-bi-8U2"/>
+                                    <constraint firstAttribute="width" secondItem="bjG-2U-6fF" secondAttribute="height" id="nCs-oZ-eoE"/>
+                                    <constraint firstItem="tdQ-8c-oJd" firstAttribute="centerY" secondItem="bjG-2U-6fF" secondAttribute="centerY" id="rTj-Re-YjR"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="AWY-Mk-nWK" appends="YES" id="lGl-Yz-nzO"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bjG-2U-6fF" firstAttribute="top" secondItem="yzN-Kf-6zx" secondAttribute="top" constant="20" id="0FT-Oi-vh0"/>
+                            <constraint firstItem="bjG-2U-6fF" firstAttribute="width" secondItem="h7Q-UU-a4z" secondAttribute="width" multiplier="0.8" id="Vaw-cj-Izc"/>
+                            <constraint firstItem="bjG-2U-6fF" firstAttribute="centerX" secondItem="yzN-Kf-6zx" secondAttribute="centerX" id="fgd-uq-mVo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="yzN-Kf-6zx"/>
+                    </view>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="cardCollectionView" destination="SP8-Fb-HvT" id="pUI-WO-3mc"/>
+                        <outlet property="cardContainerView" destination="bjG-2U-6fF" id="F61-mF-iEQ"/>
+                        <outlet property="cardLabel" destination="tdQ-8c-oJd" id="sXU-Vi-2NN"/>
+                        <outlet property="tapGesture" destination="AWY-Mk-nWK" id="uko-Fn-ttk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xUC-Ov-dJQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="AWY-Mk-nWK">
+                    <connections>
+                        <action selector="flipCardTapGesturePressed:" destination="nfR-tr-YSf" id="Pg0-RF-a6v"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-194.20289855072465" y="136.60714285714286"/>
+        </scene>
+    </scenes>
+</document>

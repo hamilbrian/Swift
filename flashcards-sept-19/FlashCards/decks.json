@@ -1,0 +1,49 @@
+
+[
+    {
+        "identifier": "090bdfea-41f2-4e5f-9d88-d441be583e48",
+        "name": "Emoji Cards",
+        "cards": [
+            {
+                "back": "Tears of joy",
+                "front": "😂"
+            },
+            {
+                "back": "Expressionless",
+                "front": "😑"
+            },
+            {
+                "back": "Disappointed",
+                "front": "😞"
+            },
+            {
+                "back": "Confused",
+                "front": "😕"
+            },
+            {
+                "back": "Wide open eyes",
+                "front": "😳"
+            },
+            {
+                "back": "Party",
+                "front": "🥳"
+            },
+            {
+                "back": "Grimacing",
+                "front": "😬"
+            },
+            {
+                "back": "Smiling",
+                "front": "☺️"
+            },
+            {
+                "back": "Smiling squinting eyes",
+                "front": "😊"
+            },
+            {
+                "back": "Thinking",
+                "front": "🤔"
+            }
+        ]
+    }
+]
