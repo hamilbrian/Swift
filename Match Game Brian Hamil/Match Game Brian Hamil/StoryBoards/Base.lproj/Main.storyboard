@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tDh-ou-AeC">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="mgY-ne-xUZ">
+            <objects>
+                <navigationController title="ViewController" id="tDh-ou-AeC" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fmP-Pd-3mp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="Q3W-VQ-6vY" kind="relationship" relationship="rootViewController" id="j1i-wY-xli"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zZR-pO-cpG" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-410" y="76"/>
+        </scene>
+        <!--ViewController-->
+        <scene sceneID="uyW-Mh-gfy">
+            <objects>
+                <viewController storyboardIdentifier="Main Menu" title="ViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Q3W-VQ-6vY" customClass="MainController" customModule="Match_Game_Brian_Hamil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="I7h-Gy-AIb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="iiF-a3-Jt9">
+                                <rect key="frame" x="172.5" y="409.5" width="69" height="77"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ljK-fv-rEZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="69" height="41"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                        <state key="normal" title="Play"/>
+                                        <connections>
+                                            <action selector="playButtonPressed:" destination="Q3W-VQ-6vY" eventType="touchUpInside" id="GgM-iB-U4w"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R6h-AJ-zhP">
+                                        <rect key="frame" x="0.0" y="41" width="69" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Options"/>
+                                        <connections>
+                                            <action selector="optionsButtonPressed:" destination="Q3W-VQ-6vY" eventType="touchUpInside" id="WLo-ho-M1p"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="iiF-a3-Jt9" firstAttribute="centerX" secondItem="I7h-Gy-AIb" secondAttribute="centerX" id="4pC-7A-SSb"/>
+                            <constraint firstItem="iiF-a3-Jt9" firstAttribute="centerY" secondItem="I7h-Gy-AIb" secondAttribute="centerY" id="fT2-Yt-53v"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YBu-NI-jeF"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="hLR-v4-Jw6"/>
+                    <connections>
+                        <outlet property="optionsButton" destination="R6h-AJ-zhP" id="Ddl-Ub-uUf"/>
+                        <outlet property="playButton" destination="ljK-fv-rEZ" id="l8t-D8-rYc"/>
+                        <segue destination="k3Q-kQ-jML" kind="show" identifier="Game Segue" id="8AZ-9X-phl"/>
+                        <segue destination="w5c-fk-Dy4" kind="show" identifier="Options Segue" id="sPL-N5-Lui"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="d7Q-B0-oUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="370" y="74"/>
+        </scene>
+        <!--Game Screen-->
+        <scene sceneID="l1q-dE-jbz">
+            <objects>
+                <collectionViewController storyboardIdentifier="Game Screen" title="Game Screen" useStoryboardIdentifierAsRestorationIdentifier="YES" id="k3Q-kQ-jML" customClass="GameViewController" customModule="Match_Game_Brian_Hamil" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="UXD-bW-tT2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gLh-Qc-b9T">
+                            <size key="itemSize" width="90" height="76"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="Card Cell" id="uvI-ih-kwh" customClass="cardCollectionViewCell" customModule="Match_Game_Brian_Hamil" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="90" height="76"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="hfl-Zs-4fG">
+                                    <rect key="frame" x="0.0" y="0.0" width="90" height="76"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </collectionViewCellContentView>
+                                <size key="customSize" width="90" height="76"/>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="k3Q-kQ-jML" id="nZe-hR-NXQ"/>
+                            <outlet property="delegate" destination="k3Q-kQ-jML" id="Dcu-MP-zxl"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="zpi-GH-etq"/>
+                    <connections>
+                        <outlet property="collectionView" destination="UXD-bW-tT2" id="Jc3-0g-33q"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oTL-YI-0xE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1234.7826086956522" y="-308.03571428571428"/>
+        </scene>
+        <!--Options Menu-->
+        <scene sceneID="PIb-qg-um5">
+            <objects>
+                <viewController storyboardIdentifier="Options Screen" title="Options Menu" useStoryboardIdentifierAsRestorationIdentifier="YES" id="w5c-fk-Dy4" customClass="OptionsViewController" customModule="Match_Game_Brian_Hamil" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ghW-X9-RlE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rgy-E9-KHT">
+                                <rect key="frame" x="146.5" y="386.5" width="121" height="123"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Options Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9rc-Rc-tVd">
+                                        <rect key="frame" x="0.0" y="0.0" width="121" height="24"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gix-iV-WQ9">
+                                        <rect key="frame" x="0.0" y="24" width="121" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="2 by 2"/>
+                                        <connections>
+                                            <action selector="set2by2Pressed:" destination="w5c-fk-Dy4" eventType="touchUpInside" id="DCN-DZ-m4l"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8DS-XA-KJX">
+                                        <rect key="frame" x="0.0" y="57" width="121" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="4 by 4"/>
+                                        <connections>
+                                            <action selector="set4by4Pressed:" destination="w5c-fk-Dy4" eventType="touchUpInside" id="ij3-yJ-37r"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oMg-O4-5Zo">
+                                        <rect key="frame" x="0.0" y="90" width="121" height="33"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <state key="normal" title="6 by 6"/>
+                                        <connections>
+                                            <action selector="set6by6Pressed:" destination="w5c-fk-Dy4" eventType="touchUpInside" id="ssc-QI-LJh"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rgy-E9-KHT" firstAttribute="centerY" secondItem="ghW-X9-RlE" secondAttribute="centerY" id="ZIq-r3-Cu1"/>
+                            <constraint firstItem="rgy-E9-KHT" firstAttribute="centerX" secondItem="ghW-X9-RlE" secondAttribute="centerX" id="zXw-gY-4XA"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8pu-Qd-RqL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="AmX-pg-lKA"/>
+                    <connections>
+                        <outlet property="puzzleSizeLabel" destination="9rc-Rc-tVd" id="Uvq-fQ-9ki"/>
+                        <outlet property="set2by2" destination="Gix-iV-WQ9" id="ixj-jQ-Qqq"/>
+                        <outlet property="set4dy4" destination="8DS-XA-KJX" id="Ck0-cf-KGt"/>
+                        <outlet property="set6by6" destination="oMg-O4-5Zo" id="dTs-Hl-2So"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NyY-ou-L68" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1236" y="397"/>
+        </scene>
+    </scenes>
+</document>
