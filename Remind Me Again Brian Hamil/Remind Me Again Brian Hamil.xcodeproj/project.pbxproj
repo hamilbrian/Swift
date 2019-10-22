@@ -1,0 +1,610 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A4CA24E3235F616B00121B86 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA24E2235F616B00121B86 /* AppDelegate.swift */; };
+		A4CA24E5235F616B00121B86 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA24E4235F616B00121B86 /* SceneDelegate.swift */; };
+		A4CA24E8235F616B00121B86 /* Remind_Me_Again_Brian_Hamil.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A4CA24E6235F616B00121B86 /* Remind_Me_Again_Brian_Hamil.xcdatamodeld */; };
+		A4CA24EA235F616B00121B86 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA24E9235F616B00121B86 /* ContentView.swift */; };
+		A4CA24EC235F616D00121B86 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4CA24EB235F616D00121B86 /* Assets.xcassets */; };
+		A4CA24EF235F616D00121B86 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A4CA24EE235F616D00121B86 /* Preview Assets.xcassets */; };
+		A4CA24F2235F616D00121B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4CA24F0235F616D00121B86 /* LaunchScreen.storyboard */; };
+		A4CA24FD235F616D00121B86 /* Remind_Me_Again_Brian_HamilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA24FC235F616D00121B86 /* Remind_Me_Again_Brian_HamilTests.swift */; };
+		A4CA2508235F616D00121B86 /* Remind_Me_Again_Brian_HamilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA2507235F616D00121B86 /* Remind_Me_Again_Brian_HamilUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A4CA24F9235F616D00121B86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CA24D7235F616B00121B86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4CA24DE235F616B00121B86;
+			remoteInfo = "Remind Me Again Brian Hamil";
+		};
+		A4CA2504235F616D00121B86 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A4CA24D7235F616B00121B86 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A4CA24DE235F616B00121B86;
+			remoteInfo = "Remind Me Again Brian Hamil";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A4CA24DF235F616B00121B86 /* Remind Me Again Brian Hamil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Remind Me Again Brian Hamil.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4CA24E2235F616B00121B86 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A4CA24E4235F616B00121B86 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		A4CA24E7235F616B00121B86 /* Remind_Me_Again_Brian_Hamil.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Remind_Me_Again_Brian_Hamil.xcdatamodel; sourceTree = "<group>"; };
+		A4CA24E9235F616B00121B86 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A4CA24EB235F616D00121B86 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A4CA24EE235F616D00121B86 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A4CA24F1235F616D00121B86 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A4CA24F3235F616D00121B86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4CA24F8235F616D00121B86 /* Remind Me Again Brian HamilTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Remind Me Again Brian HamilTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4CA24FC235F616D00121B86 /* Remind_Me_Again_Brian_HamilTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remind_Me_Again_Brian_HamilTests.swift; sourceTree = "<group>"; };
+		A4CA24FE235F616D00121B86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4CA2503235F616D00121B86 /* Remind Me Again Brian HamilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Remind Me Again Brian HamilUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		A4CA2507235F616D00121B86 /* Remind_Me_Again_Brian_HamilUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remind_Me_Again_Brian_HamilUITests.swift; sourceTree = "<group>"; };
+		A4CA2509235F616D00121B86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A4CA24DC235F616B00121B86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CA24F5235F616D00121B86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CA2500235F616D00121B86 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A4CA24D6235F616B00121B86 = {
+			isa = PBXGroup;
+			children = (
+				A4CA24E1235F616B00121B86 /* Remind Me Again Brian Hamil */,
+				A4CA24FB235F616D00121B86 /* Remind Me Again Brian HamilTests */,
+				A4CA2506235F616D00121B86 /* Remind Me Again Brian HamilUITests */,
+				A4CA24E0235F616B00121B86 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A4CA24E0235F616B00121B86 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A4CA24DF235F616B00121B86 /* Remind Me Again Brian Hamil.app */,
+				A4CA24F8235F616D00121B86 /* Remind Me Again Brian HamilTests.xctest */,
+				A4CA2503235F616D00121B86 /* Remind Me Again Brian HamilUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A4CA24E1235F616B00121B86 /* Remind Me Again Brian Hamil */ = {
+			isa = PBXGroup;
+			children = (
+				A4CA24E2235F616B00121B86 /* AppDelegate.swift */,
+				A4CA24E4235F616B00121B86 /* SceneDelegate.swift */,
+				A4CA24E9235F616B00121B86 /* ContentView.swift */,
+				A4CA24EB235F616D00121B86 /* Assets.xcassets */,
+				A4CA24F0235F616D00121B86 /* LaunchScreen.storyboard */,
+				A4CA24F3235F616D00121B86 /* Info.plist */,
+				A4CA24E6235F616B00121B86 /* Remind_Me_Again_Brian_Hamil.xcdatamodeld */,
+				A4CA24ED235F616D00121B86 /* Preview Content */,
+			);
+			path = "Remind Me Again Brian Hamil";
+			sourceTree = "<group>";
+		};
+		A4CA24ED235F616D00121B86 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A4CA24EE235F616D00121B86 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A4CA24FB235F616D00121B86 /* Remind Me Again Brian HamilTests */ = {
+			isa = PBXGroup;
+			children = (
+				A4CA24FC235F616D00121B86 /* Remind_Me_Again_Brian_HamilTests.swift */,
+				A4CA24FE235F616D00121B86 /* Info.plist */,
+			);
+			path = "Remind Me Again Brian HamilTests";
+			sourceTree = "<group>";
+		};
+		A4CA2506235F616D00121B86 /* Remind Me Again Brian HamilUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A4CA2507235F616D00121B86 /* Remind_Me_Again_Brian_HamilUITests.swift */,
+				A4CA2509235F616D00121B86 /* Info.plist */,
+			);
+			path = "Remind Me Again Brian HamilUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A4CA24DE235F616B00121B86 /* Remind Me Again Brian Hamil */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4CA250C235F616D00121B86 /* Build configuration list for PBXNativeTarget "Remind Me Again Brian Hamil" */;
+			buildPhases = (
+				A4CA24DB235F616B00121B86 /* Sources */,
+				A4CA24DC235F616B00121B86 /* Frameworks */,
+				A4CA24DD235F616B00121B86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Remind Me Again Brian Hamil";
+			productName = "Remind Me Again Brian Hamil";
+			productReference = A4CA24DF235F616B00121B86 /* Remind Me Again Brian Hamil.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A4CA24F7235F616D00121B86 /* Remind Me Again Brian HamilTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4CA250F235F616D00121B86 /* Build configuration list for PBXNativeTarget "Remind Me Again Brian HamilTests" */;
+			buildPhases = (
+				A4CA24F4235F616D00121B86 /* Sources */,
+				A4CA24F5235F616D00121B86 /* Frameworks */,
+				A4CA24F6235F616D00121B86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4CA24FA235F616D00121B86 /* PBXTargetDependency */,
+			);
+			name = "Remind Me Again Brian HamilTests";
+			productName = "Remind Me Again Brian HamilTests";
+			productReference = A4CA24F8235F616D00121B86 /* Remind Me Again Brian HamilTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A4CA2502235F616D00121B86 /* Remind Me Again Brian HamilUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A4CA2512235F616D00121B86 /* Build configuration list for PBXNativeTarget "Remind Me Again Brian HamilUITests" */;
+			buildPhases = (
+				A4CA24FF235F616D00121B86 /* Sources */,
+				A4CA2500235F616D00121B86 /* Frameworks */,
+				A4CA2501235F616D00121B86 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A4CA2505235F616D00121B86 /* PBXTargetDependency */,
+			);
+			name = "Remind Me Again Brian HamilUITests";
+			productName = "Remind Me Again Brian HamilUITests";
+			productReference = A4CA2503235F616D00121B86 /* Remind Me Again Brian HamilUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A4CA24D7235F616B00121B86 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = user159467;
+				TargetAttributes = {
+					A4CA24DE235F616B00121B86 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+					A4CA24F7235F616D00121B86 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = A4CA24DE235F616B00121B86;
+					};
+					A4CA2502235F616D00121B86 = {
+						CreatedOnToolsVersion = 11.0;
+						TestTargetID = A4CA24DE235F616B00121B86;
+					};
+				};
+			};
+			buildConfigurationList = A4CA24DA235F616B00121B86 /* Build configuration list for PBXProject "Remind Me Again Brian Hamil" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A4CA24D6235F616B00121B86;
+			productRefGroup = A4CA24E0235F616B00121B86 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A4CA24DE235F616B00121B86 /* Remind Me Again Brian Hamil */,
+				A4CA24F7235F616D00121B86 /* Remind Me Again Brian HamilTests */,
+				A4CA2502235F616D00121B86 /* Remind Me Again Brian HamilUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A4CA24DD235F616B00121B86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4CA24F2235F616D00121B86 /* LaunchScreen.storyboard in Resources */,
+				A4CA24EF235F616D00121B86 /* Preview Assets.xcassets in Resources */,
+				A4CA24EC235F616D00121B86 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CA24F6235F616D00121B86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CA2501235F616D00121B86 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A4CA24DB235F616B00121B86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4CA24E3235F616B00121B86 /* AppDelegate.swift in Sources */,
+				A4CA24E5235F616B00121B86 /* SceneDelegate.swift in Sources */,
+				A4CA24EA235F616B00121B86 /* ContentView.swift in Sources */,
+				A4CA24E8235F616B00121B86 /* Remind_Me_Again_Brian_Hamil.xcdatamodeld in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CA24F4235F616D00121B86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4CA24FD235F616D00121B86 /* Remind_Me_Again_Brian_HamilTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A4CA24FF235F616D00121B86 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4CA2508235F616D00121B86 /* Remind_Me_Again_Brian_HamilUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A4CA24FA235F616D00121B86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4CA24DE235F616B00121B86 /* Remind Me Again Brian Hamil */;
+			targetProxy = A4CA24F9235F616D00121B86 /* PBXContainerItemProxy */;
+		};
+		A4CA2505235F616D00121B86 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A4CA24DE235F616B00121B86 /* Remind Me Again Brian Hamil */;
+			targetProxy = A4CA2504235F616D00121B86 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A4CA24F0235F616D00121B86 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A4CA24F1235F616D00121B86 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A4CA250A235F616D00121B86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A4CA250B235F616D00121B86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A4CA250D235F616D00121B86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Remind Me Again Brian Hamil/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Remind Me Again Brian Hamil/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "umsl.Remind-Me-Again-Brian-Hamil";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A4CA250E235F616D00121B86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"Remind Me Again Brian Hamil/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "Remind Me Again Brian Hamil/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "umsl.Remind-Me-Again-Brian-Hamil";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A4CA2510235F616D00121B86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Remind Me Again Brian HamilTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "umsl.Remind-Me-Again-Brian-HamilTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Remind Me Again Brian Hamil.app/Remind Me Again Brian Hamil";
+			};
+			name = Debug;
+		};
+		A4CA2511235F616D00121B86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Remind Me Again Brian HamilTests/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "umsl.Remind-Me-Again-Brian-HamilTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Remind Me Again Brian Hamil.app/Remind Me Again Brian Hamil";
+			};
+			name = Release;
+		};
+		A4CA2513235F616D00121B86 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Remind Me Again Brian HamilUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "umsl.Remind-Me-Again-Brian-HamilUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Remind Me Again Brian Hamil";
+			};
+			name = Debug;
+		};
+		A4CA2514235F616D00121B86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Remind Me Again Brian HamilUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "umsl.Remind-Me-Again-Brian-HamilUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "Remind Me Again Brian Hamil";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A4CA24DA235F616B00121B86 /* Build configuration list for PBXProject "Remind Me Again Brian Hamil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4CA250A235F616D00121B86 /* Debug */,
+				A4CA250B235F616D00121B86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4CA250C235F616D00121B86 /* Build configuration list for PBXNativeTarget "Remind Me Again Brian Hamil" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4CA250D235F616D00121B86 /* Debug */,
+				A4CA250E235F616D00121B86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4CA250F235F616D00121B86 /* Build configuration list for PBXNativeTarget "Remind Me Again Brian HamilTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4CA2510235F616D00121B86 /* Debug */,
+				A4CA2511235F616D00121B86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A4CA2512235F616D00121B86 /* Build configuration list for PBXNativeTarget "Remind Me Again Brian HamilUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A4CA2513235F616D00121B86 /* Debug */,
+				A4CA2514235F616D00121B86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A4CA24E6235F616B00121B86 /* Remind_Me_Again_Brian_Hamil.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A4CA24E7235F616B00121B86 /* Remind_Me_Again_Brian_Hamil.xcdatamodel */,
+			);
+			currentVersion = A4CA24E7235F616B00121B86 /* Remind_Me_Again_Brian_Hamil.xcdatamodel */;
+			path = Remind_Me_Again_Brian_Hamil.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = A4CA24D7235F616B00121B86 /* Project object */;
+}
