@@ -11,7 +11,21 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack() {
-            Button(action: {}) {
+            Button(action: {
+                let center = UNUserNotificationCenter.current()
+                
+                let content = UNMutableNotificationContent()
+                content.title = "New Reminder"
+                content.body = "This is a new push notification"
+                content.sound = .default
+                
+                let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 20, repeats: false)
+                
+                let request = UNNotificationRequest(identifier: "reminder", content: content, trigger: trigger)
+                
+                center.add(request) { (error) in if error != nil { print(error?.localizedDescription ?? "error local notification")}}
+                
+            }) {
                 Text("Add a new notification")
             }
             Spacer()
