@@ -15,6 +15,8 @@
 		A4CA24F2235F616D00121B86 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A4CA24F0235F616D00121B86 /* LaunchScreen.storyboard */; };
 		A4CA24FD235F616D00121B86 /* Remind_Me_Again_Brian_HamilTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA24FC235F616D00121B86 /* Remind_Me_Again_Brian_HamilTests.swift */; };
 		A4CA2508235F616D00121B86 /* Remind_Me_Again_Brian_HamilUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4CA2507235F616D00121B86 /* Remind_Me_Again_Brian_HamilUITests.swift */; };
+		A4EFFF0F2368DFD000738C73 /* Reminder.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EFFF0E2368DFD000738C73 /* Reminder.swift */; };
+		A4EFFF112368ECB700738C73 /* ReminderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A4EFFF102368ECB700738C73 /* ReminderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		A4CA2503235F616D00121B86 /* Remind Me Again Brian HamilUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Remind Me Again Brian HamilUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A4CA2507235F616D00121B86 /* Remind_Me_Again_Brian_HamilUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Remind_Me_Again_Brian_HamilUITests.swift; sourceTree = "<group>"; };
 		A4CA2509235F616D00121B86 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A4EFFF0E2368DFD000738C73 /* Reminder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reminder.swift; sourceTree = "<group>"; };
+		A4EFFF102368ECB700738C73 /* ReminderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReminderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +110,8 @@
 				A4CA24F0235F616D00121B86 /* LaunchScreen.storyboard */,
 				A4CA24F3235F616D00121B86 /* Info.plist */,
 				A4CA24E6235F616B00121B86 /* Remind_Me_Again_Brian_Hamil.xcdatamodeld */,
+				A4EFFF0E2368DFD000738C73 /* Reminder.swift */,
+				A4EFFF102368ECB700738C73 /* ReminderView.swift */,
 			);
 			path = "Remind Me Again Brian Hamil";
 			sourceTree = "<group>";
@@ -260,8 +266,10 @@
 			files = (
 				A4CA24E3235F616B00121B86 /* AppDelegate.swift in Sources */,
 				A4CA24E5235F616B00121B86 /* SceneDelegate.swift in Sources */,
+				A4EFFF112368ECB700738C73 /* ReminderView.swift in Sources */,
 				A4CA24EA235F616B00121B86 /* ContentView.swift in Sources */,
 				A4CA24E8235F616B00121B86 /* Remind_Me_Again_Brian_Hamil.xcdatamodeld in Sources */,
+				A4EFFF0F2368DFD000738C73 /* Reminder.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
