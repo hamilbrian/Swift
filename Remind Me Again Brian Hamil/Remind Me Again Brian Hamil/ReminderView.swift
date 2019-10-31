@@ -11,6 +11,8 @@ import SwiftUI
 struct ReminderView: View {
     var title: String = ""
     var details: String = ""
+    var time: Date?
+    let dateformatter = DateFormatter()
     
     var body: some View {
         VStack {
@@ -18,6 +20,7 @@ struct ReminderView: View {
                 .font(.headline)
             Text(details)
                 .font(.subheadline)
+            Text(dateformatter.string(from: time ?? Date()))
         }
     }
 }

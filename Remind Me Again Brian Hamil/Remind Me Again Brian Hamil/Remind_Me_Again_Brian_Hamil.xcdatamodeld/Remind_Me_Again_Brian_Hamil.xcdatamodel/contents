@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="14903" systemVersion="18G87" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15400" systemVersion="18G87" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Reminder" representedClassName=".Reminder" syncable="YES">
         <attribute name="details" optional="YES" attributeType="String"/>
         <attribute name="reminderID" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="time" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="title" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Reminder" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="Reminder" positionX="-63" positionY="-18" width="128" height="103"/>
     </elements>
 </model>

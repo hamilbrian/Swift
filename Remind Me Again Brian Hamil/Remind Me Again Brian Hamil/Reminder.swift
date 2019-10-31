@@ -13,12 +13,13 @@ public class Reminder: NSManagedObject, Identifiable {
     @NSManaged public var reminderID: UUID?
     @NSManaged public var title: String?
     @NSManaged public var details: String?
+    @NSManaged public var time: Date?
 }
 
 extension Reminder {
     static func getAllReminders() -> NSFetchRequest<Reminder> {
         let request: NSFetchRequest<Reminder> = Reminder.fetchRequest() as! NSFetchRequest<Reminder>
-        let sortDescriptor = NSSortDescriptor(key: "reminderID", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "time", ascending: true)
         request.sortDescriptors = [sortDescriptor]
         return request
     }
