@@ -10,16 +10,14 @@ import SwiftUI
 
 struct ReminderView: View {
     var title: String = ""
-    var details: String = ""
     var time: Date?
     let dateformatter = DateFormatter()
+    var details: String = "" // from initial design - not used
     
     var body: some View {
-        VStack {
+        VStack(alignment: .leading) {
             Text(title)
                 .font(.headline)
-            Text(details)
-                .font(.subheadline)
             Text(dateformatter.string(from: time ?? Date()))
         }
     }
